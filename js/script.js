@@ -7,17 +7,28 @@
 console.log('Welcome Robin');
 var app = [];
 var formulaString = "";
+var answer = "";
 
-app.calculation = function(x) {
-	$(".btn").on("click", function() {
+app.calculation = function() {
+	$(".btnC").on("click", function() {
+		$(".screen").empty();
+		formulaString = "";
+		console.log(formulaString);
+	});
+	
+	$(".numbers>.btn, .math>.btn").on("click", function() {
 		var number = $(this).attr("value");
 		formulaString += number;
 		$(".screen").text(formulaString);
 		console.log(formulaString);
 		console.log("click");
 	});
+	
 	$(".btnEq").on("click", function() {
-		formulaString.eval();
-		$(".screen").empty().text(formulaString);
+		console.log(answer);
+		answer = eval(formulaString);
+		$(".screen").empty();
+		$(".screen").text(answer);
 	});
+
 }(); 
