@@ -4,31 +4,36 @@
 // 3. When pressing 'C' clear the screen, and the string.
 // 4. When pressing the '=', perform the calculation and present on the screen
 
-console.log('Welcome Robin');
+console.log('Welcome Robin. Shall we do some math?');
 var app = [];
 var formulaString = "";
 var answer = "";
 
 app.calculation = function() {
+
 	$(".btnC").on("click", function() {
 		$(".screen").empty();
-		formulaString = "";
-		console.log(formulaString);
+		$(".screen").text("0");
+		formulaString = "0";
+		console.log("Calculator Cleared " + formulaString);
 	});
 	
 	$(".numbers>.btn, .math>.btn").on("click", function() {
+		if ($(".screen").text() === "0") {
+			formulaString = "";
+		}
 		var number = $(this).attr("value");
 		formulaString += number;
 		$(".screen").text(formulaString);
 		console.log(formulaString);
-		console.log("click");
 	});
 	
 	$(".btnEq").on("click", function() {
-		console.log(answer);
 		answer = eval(formulaString);
+		console.log(answer);
 		$(".screen").empty();
 		$(".screen").text(answer);
+		formulaString = answer;
 	});
 
 }(); 

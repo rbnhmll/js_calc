@@ -127,13 +127,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   box-sizing: border-box; }
 
-body {
-  font-weight: 100; }
+html {
+  font-family: 'Work Sans', sans-serif; }
 
 .wrapper {
   width: 400px;
   display: inline-block;
-  /* border: 2px solid #202020; */
+  font-weight: 200;
   margin: 0 auto;
   margin-top: 50px;
   display: -webkit-flex;
@@ -150,7 +150,7 @@ body {
   width: 100%;
   color: #fff;
   font-size: 4.5rem;
-  padding-top: 55px;
+  padding: 55px 25px;
   background: #202020;
   height: 150px;
   text-align: right; }
@@ -161,9 +161,10 @@ body {
   display: flex;
   color: #000000; }
   .buttons .btn {
-    font-size: 2rem;
+    font-weight: 200;
+    font-size: 2.5rem;
     width: 100px;
-    padding-top: 20px;
+    padding-top: 10px;
     height: 100px;
     border: 1px solid #959697;
     text-align: center; }
@@ -175,7 +176,9 @@ body {
   display: -ms-flexbox;
   display: flex; }
   .special .btn {
-    background: #C5C6C9; }
+    background: #C5C6C9;
+    font-size: 2rem;
+    font-weight: 100; }
 
 .numbers {
   width: 300px;
@@ -188,7 +191,9 @@ body {
   .numbers .btn {
     background: #D1D2D4; }
   .numbers .btn0 {
-    width: 200px; }
+    width: 200px;
+    text-align: left;
+    padding-left: 40px; }
 
 .math {
   display: -webkit-flex;
@@ -198,5 +203,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column; }
   .math .btn {
+    font-size: 3rem;
     background: #F98711;
     color: white; }
