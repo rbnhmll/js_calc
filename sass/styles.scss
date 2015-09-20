@@ -76,3 +76,25 @@ body {
 		color: white;
 	}
 }
+
+.calculator {
+  transition: transform 0.75s ease;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+.deal-with-it {
+  display: none;
+  width: 500px;
+  position: absolute;
+  left: calc(50% - 250px);
+  // transform: translateX(-100%);
+  top: 200px;
+  z-index: 10;
+}
+
+.display {
+  display: inline-block;
+}

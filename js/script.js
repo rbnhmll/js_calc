@@ -14,6 +14,8 @@ app.calculation = function() {
 	$(".btnC").on("click", function() {
 		$(".screen").empty();
 		$(".screen").text("0");
+		$(".calculator").removeClass("rotate180");
+		$(".deal-with-it").removeClass("display animated fadeInDownBig");
 		formulaString = "0";
 		console.log("Calculator Cleared " + formulaString);
 	});
@@ -26,6 +28,12 @@ app.calculation = function() {
 		formulaString += number;
 		$(".screen").text(formulaString);
 		console.log(formulaString);
+		
+		if (formulaString === "58008") {
+			$(".calculator").addClass("rotate180");
+			$(".deal-with-it").addClass("display animated fadeInDownBig");
+			console.log('BOOBS');
+		};
 	});
 	
 	$(".btnEq").on("click", function() {
@@ -35,5 +43,6 @@ app.calculation = function() {
 		$(".screen").text(answer);
 		formulaString = answer;
 	});
+
 
 }(); 
