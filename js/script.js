@@ -51,10 +51,11 @@ app.calculation = function() {
 		$(".screen").empty();
 		$(".screen").text(answer);
 		formulaString = answer;
+		// Also Easter Egg
 		if (answer === 58008) {
 			dealWithIt();
 			console.log('BOOBS');
-		}
+		};
 	});
 
 }(); 
