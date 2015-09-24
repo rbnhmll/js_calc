@@ -133,10 +133,11 @@ html {
 .time {
   color: #fff;
   position: absolute;
-  top: 20px;
+  top: 0px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%); }
+          transform: translateX(-50%);
+  margin: 0; }
 
 .wrapper {
   width: 374px;
@@ -152,7 +153,8 @@ html {
           flex-wrap: wrap;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  position: relative; }
 
 .screen {
   width: 100%;

@@ -12,9 +12,10 @@ html {
 .time {
   color: #fff;
   position: absolute;
-  top: 20px;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
+  margin: 0;
 }
 
 .wrapper {
@@ -26,6 +27,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  position: relative;
 }
 .screen {
 	width: 100%;
