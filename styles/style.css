@@ -130,12 +130,20 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   font-family: 'Work Sans', sans-serif; }
 
+.time {
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+
 .wrapper {
-  width: 400px;
+  width: 374px;
   display: inline-block;
   font-weight: 200;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -150,22 +158,23 @@ html {
   width: 100%;
   color: #fff;
   font-size: 4.5rem;
-  padding: 55px 25px;
+  padding: 93px 15px;
   background: #202020;
-  height: 150px;
+  height: 186px;
   text-align: right; }
 
 .buttons {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #000000; }
+  color: #000;
+  border: 1px solid #000; }
   .buttons .btn {
     font-weight: 200;
     font-size: 2.5rem;
-    width: 100px;
+    width: 93px;
+    height: 93px;
     padding-top: 10px;
-    height: 100px;
     border: 1px solid #959697;
     text-align: center; }
     .buttons .btn:hover {
@@ -181,7 +190,7 @@ html {
     font-weight: 100; }
 
 .numbers {
-  width: 300px;
+  width: 279px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -191,7 +200,7 @@ html {
   .numbers .btn {
     background: #D1D2D4; }
   .numbers .btn0 {
-    width: 200px;
+    width: 186px;
     text-align: left;
     padding-left: 40px; }
 
@@ -227,6 +236,7 @@ html {
   display: inline-block; }
 
 .deal-text {
+  margin: 10px 0;
   opacity: 0;
   text-align: center;
   font-size: 7rem;

@@ -8,15 +8,23 @@ console.log('Welcome Robin. Shall we do some math?');
 var app = [];
 var formulaString = "";
 var answer = "";
+var time = new Date(Date.now());
+var formatted = time.getHours() + ":" + time.getMinutes();
 var easterEggs = [0.7734, 8369417052, 8008, 9009, 58008, 59009, 58008618, 59009619, 5318008, 5319009, 55378008, 32008, 5317009, 7734, 37047734, 4517734, 316006];
 
 app.calculation = function() {
 
+	// Clock function
+	setInterval( function() {
+		$(".time").text(formatted);
+	}, 1000);
+	
 	// Easteregg Function
 	function dealWithIt() {
 		$(".calculator").addClass("rotate180");
 		$(".deal-with-it").addClass("display animated fadeInDownBig");
 		setTimeout(function() {
+			$("title").text("DEAL WITH IT!");
 			$(".deal-text").addClass("text-display");
 			console.log("wait for it!");
 		}, 1200);
