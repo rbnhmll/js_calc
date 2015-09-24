@@ -130,6 +130,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   font-family: 'Work Sans', sans-serif; }
 
+body {
+  background: url(../images/ricepaper2.png);
+  background-repeat: repeat; }
+
 .tool-bar {
   position: absolute;
   display: -webkit-flex;
