@@ -11,10 +11,12 @@
 	var answer = "";
 	var easterEggs = [0.7734, 8369417052, 8008, 9009, 58008, 59009, 58008618, 59009619, 5318008, 5319009, 55378008, 32008, 5317009, 7734, 37047734, 4517734, 316006];
 
+	// .ready() function, but simplified.
 	$(function(){
 		app.init();
 	}); //end of document ready
 
+	// Will be run on ready, as told above.
 	app.init = function() {
 		app.startTime();
 		app.calculation();
@@ -25,10 +27,15 @@
 	    var today = new Date();
 	    var h = today.getHours();
 	    var m = today.getMinutes();
+	    m = checkTime(m);
 	    $(".time").text(h+":"+m);
 	    var t = setTimeout(function(){
 	    	app.startTime()
 	    },500);
+	    function checkTime(i) {
+        if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+	    }
 	};
 
 	app.calculation = function() {
