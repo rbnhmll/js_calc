@@ -130,14 +130,22 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   font-family: 'Work Sans', sans-serif; }
 
-.time {
-  color: #fff;
+.tool-bar {
   position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   top: 0px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin: 0; }
+  width: 100%;
+  padding: 5px; }
+  .tool-bar .time {
+    color: #fff;
+    margin: 0; }
+  .tool-bar .fa {
+    color: #fff; }
 
 .wrapper {
   width: 374px;

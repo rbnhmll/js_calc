@@ -9,13 +9,21 @@ html {
   font-family: 'Work Sans', sans-serif;
 }
 
-.time {
-  color: #fff;
+.tool-bar{
   position: absolute;
+  display: flex;
+  justify-content: space-between;
   top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
+  width: 100%;
+  padding: 5px;
+  .time {
+    color: #fff;
+    // transform: translateX(-50%);
+    margin: 0;
+  }
+  .fa {
+    color: #fff;
+  }
 }
 
 .wrapper {

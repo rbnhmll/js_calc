@@ -1,12 +1,4 @@
-// Pseudo Code
-// 1. when user clicks on a number button, add it to a string, and the screen
-// 2. When pressing an operator, add it to the the string
-// 3. When pressing 'C' clear the screen, and the string.
-// 4. When pressing the '=', perform the calculation and present on the screen
-
-
-	console.log('Welcome Robin. Shall we do some math?');
-	var app = {};
+var app = {};
 	var formulaString = "";
 	var answer = "";
 	var easterEggs = [0.7734, 8369417052, 8008, 9009, 58008, 59009, 58008618, 59009619, 5318008, 5319009, 55378008, 32008, 5317009, 7734, 37047734, 4517734, 316006];
@@ -14,10 +6,11 @@
 	// .ready() function, but simplified.
 	$(function(){
 		app.init();
-	}); //end of document ready
+	}); //end of .ready()
 
 	// Will be run on ready, as told above.
 	app.init = function() {
+		console.log('Welcome Robin. Shall we do some math?');
 		app.startTime();
 		app.calculation();
 	};
@@ -33,7 +26,9 @@
 	    	app.startTime()
 	    },500);
 	    function checkTime(i) {
-        if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+        if (i<10) {
+	        i = "0" + i
+        };  // add zero in front of numbers < 10
         return i;
 	    }
 	};
