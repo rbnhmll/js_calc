@@ -38,7 +38,8 @@ var app = {};
 		app.dealWithIt = function() {
 			$(".calculator").addClass("rotate180");
 			$(".deal-with-it").addClass("display animated fadeInDownBig");
-			
+			$(".screen").addClass("calc-font");
+			// Delay the text reveal for comic effect.
 			setTimeout(function() {
 				$("title").text("DEAL WITH IT!");
 				$(".deal-text").addClass("text-display");
@@ -46,16 +47,20 @@ var app = {};
 			}, 1200);
 		};
 
+		// Reset function
 		$(".btnC").on("click", function() {
 			$(".screen").empty();
 			$(".screen").text("0");
 			$(".calculator").removeClass("rotate180");
 			$(".deal-with-it").removeClass("display animated fadeInDownBig");
 			$(".deal-text").removeClass("text-display");
+			$(".screen").removeClass("calc-font");
 			formulaString = "0";
+			$("title").text("JS Calc - BETA");
 			console.log("Calculator Cleared " + formulaString);
 		});
 		
+		// What to do when hitting the keys.
 		$(".numbers>.btn, .math>.btn").on("click", function() {
 			if ($(".screen").text() === "0") {
 				formulaString = "";
@@ -66,6 +71,7 @@ var app = {};
 			console.log(formulaString);
 		});
 		
+		// Answer function, but also easter egg implementation.
 		$(".btnEq").on("click", function() {
 			answer = eval(formulaString);
 			console.log(answer);
@@ -78,7 +84,7 @@ var app = {};
 					app.dealWithIt();
 					console.log('beghilos!');
 				};
-			};
-		});
-	};
+			}; // End of for loop
+		}); // End of = functions
 
+	};

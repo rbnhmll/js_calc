@@ -246,6 +246,10 @@ body {
   top: 150px;
   z-index: 10; }
 
+.calc-font {
+  font-family: 'Keania One';
+  font-size: 3.5rem; }
+
 .display {
   display: inline-block; }
 
