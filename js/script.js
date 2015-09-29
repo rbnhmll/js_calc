@@ -15,6 +15,12 @@ var app = {};
 		app.calculation();
 	};
 
+	app.checkString = function() {
+		var i = formulaString.length;
+		console.log('Length of string is ' + i);
+		formulaString = formulaString.substring(0,9);
+	};
+
 	// Clock function
 	app.startTime = function() {
 	    var today = new Date();
@@ -67,6 +73,7 @@ var app = {};
 			}
 			var number = $(this).attr("value");
 			formulaString += number;
+			app.checkString();
 			$(".screen").text(formulaString);
 			console.log(formulaString);
 		});
